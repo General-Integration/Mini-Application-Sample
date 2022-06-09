@@ -20,5 +20,13 @@
         label="Change title text, title bar background and text color"
       />
     </van-cell-group>
+    <van-cell-group>
+      <van-cell
+        is-link
+        to="/handler-playAudio"
+        title="playAudio"
+        label="Pass list of audio to play on native app"
+      />
+    </van-cell-group>
   </div>
 </template>

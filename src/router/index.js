@@ -10,6 +10,7 @@ import PlayGround from "../pages/PlayGround.vue";
 import CallHandler from "../pages/CallHandler.vue";
 import HandlerPlayground from "../pages/BridgeHandlers/HandlerPlayground.vue";
 import HandlerSetBarTitle from "../pages/BridgeHandlers/HandlerSetBarTitle.vue";
+import HandlerPlayAudioVue from "../pages/BridgeHandlers/HandlerPlayAudio.vue";
 
 const routes = [
   {
@@ -61,6 +62,11 @@ const routes = [
     path: "/handler-setBarTitle",
     name: "Handlers setBarTitle",
     component: HandlerSetBarTitle,
+  },
+  {
+    path: "/handler-playAudio",
+    name: "Handlers playAudio",
+    component: HandlerPlayAudioVue,
   },
   {
     path: "/:catchAll(.*)",

@@ -14,7 +14,7 @@ import VueJsBridge, { $fetch } from "vue-bridge-gateway";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { DefaultApolloClient } from "@vue/apollo-composable";
 
-import { Button, Cell, CellGroup, Divider, Form, Field } from "vant";
+import { Button, Cell, CellGroup, Divider, Form, Field, List } from "vant";
 
 const defaultClient = new ApolloClient({
   uri: "https://rickandmortyapi.com/graphql",
@@ -38,6 +38,7 @@ app.use(CellGroup);
 app.use(Divider);
 app.use(Form);
 app.use(Field);
+app.use(List);
 
 const requireComponent = require.context(
   "./components",
