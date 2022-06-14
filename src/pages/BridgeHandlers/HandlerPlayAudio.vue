@@ -21,7 +21,7 @@
 import { inject, onMounted, ref } from "vue";
 
 const payload = ref({
-  playId: 1,
+  playId: null,
   playlist: [
     {
       id: 1,
@@ -62,9 +62,7 @@ const payload = ref({
 });
 const $bridge = inject("$bridge");
 
-onMounted(() => {
-  onItemClick({ id: 1 });
-});
+onMounted(() => {});
 
 function onItemClick(item) {
   payload.value.playId = item?.id;
