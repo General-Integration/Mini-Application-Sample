@@ -142,6 +142,7 @@ const $bridge = inject("$bridge");
 onMounted(() => {
   $bridge.registerHandler("onPlayIdChange", (res) => {
     setLog(`"onPlayIdChange" event triggered from native..`, res);
+    payload.value.playId = res.id;
   });
   setLog(`listening to "onPlayIdChange" event from native..`);
 
@@ -167,7 +168,7 @@ function onSetAudioPlay() {
 
 function onGetPlayingId() {
   $bridge.callHandler("getPlayingId").then((res) => {
-    setLog(`mini app called "getPlayingId" handler`);
+    setLog(`mini app called "getPlayingId" handler`, res);
     payload.value.playId = res.playId;
   });
 }
