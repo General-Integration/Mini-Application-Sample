@@ -56,6 +56,15 @@
         >
           setPlayList
         </van-button>
+        <van-button
+          style="margin: 0 auto"
+          round
+          type="primary"
+          size="mini"
+          @click="onSwitchPlayerMode"
+        >
+          switchPlayerMode
+        </van-button>
       </div>
     </div>
     <van-list>
@@ -178,6 +187,19 @@ function onSetPlayList() {
   $bridge.callHandler("setPlayList", payload.value).then((data) => {
     setLog(`mini app called "setPlayList" handler`, data);
   });
+}
+let playerMode = ref("FULL");
+function onSwitchPlayerMode() {
+  playerMode.value = playerMode.value === "FULL" ? "MINI" : "FULL";
+  $bridge
+    .callHandler("switchPlayerMode", {
+      mode: playerMode.value,
+    })
+    .then(() => {
+      setLog(`mini app called "switchPlayerMode" handler`, {
+        mode: playerMode.value,
+      });
+    });
 }
 
 function setLog(desc, data) {
