@@ -74,7 +74,7 @@
           @click="onItemClick(item)"
           :title="item.title"
           :icon="
-            payload.playId === item.id ? 'pause-circle-o' : 'play-circle-o'
+            +payload.playId === +item.id ? 'pause-circle-o' : 'play-circle-o'
           "
         />
       </van-cell-group>
@@ -94,7 +94,7 @@ const payload = ref({
       title: "audio 1",
       thumbnail: "https://via.placeholder.com/300x300.png?text=Audio+1",
       description: "sample description for audio 1",
-      bookId: "7",
+      bookId: 7,
     },
     {
       id: 2,
@@ -102,7 +102,7 @@ const payload = ref({
       title: "audio 2",
       thumbnail: "https://via.placeholder.com/300x300.png?text=Audio+2",
       description: "sample description for audio 2",
-      bookId: "7",
+      bookId: 7,
     },
     {
       id: 3,
@@ -110,39 +110,7 @@ const payload = ref({
       title: "audio 3",
       thumbnail: "https://via.placeholder.com/300x300.png?text=Audio+3",
       description: "sample description for audio 3",
-      bookId: "7",
-    },
-    {
-      id: 4,
-      url: "https://media.bookeyond.com/7/53.mp3",
-      title: "audio 4",
-      thumbnail: "https://via.placeholder.com/300x300.png?text=Audio+4",
-      description: "sample description for audio 4",
-      bookId: "7",
-    },
-    {
-      id: 5,
-      url: "https://media.bookeyond.com/7/54.mp3",
-      title: "audio 5",
-      thumbnail: "https://via.placeholder.com/300x300.png?text=Audio+5",
-      description: "sample description for audio 5",
-      bookId: "7",
-    },
-    {
-      id: 6,
-      url: "https://media.bookeyond.com/7/55.mp3",
-      title: "audio 6",
-      thumbnail: "https://via.placeholder.com/300x300.png?text=Audio+6",
-      description: "sample description for audio 6",
-      bookId: "7",
-    },
-    {
-      id: 7,
-      url: "https://media.bookeyond.com/7/56.mp3",
-      title: "audio 7",
-      thumbnail: "https://via.placeholder.com/300x300.png?text=Audio+7",
-      description: "sample description for audio 7",
-      bookId: "7",
+      bookId: 7,
     },
   ],
 });
@@ -191,6 +159,7 @@ function onSetPlayList() {
 let playerMode = ref("FULL");
 function onSwitchPlayerMode() {
   playerMode.value = playerMode.value === "FULL" ? "MINI" : "FULL";
+  console.log(playerMode.value);
   $bridge
     .callHandler("switchPlayerMode", {
       mode: playerMode.value,
