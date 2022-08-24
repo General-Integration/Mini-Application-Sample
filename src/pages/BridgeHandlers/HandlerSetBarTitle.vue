@@ -39,6 +39,7 @@ export default {
         title: "Detail Page",
         bgColor: "#073b4c",
         color: "#d9ed92",
+        safeAreaColor: "#256D85",
       },
     };
   },
