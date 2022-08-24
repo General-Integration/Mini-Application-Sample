@@ -21,6 +21,12 @@
           label="bgColor"
           placeholder="bgColor"
         />
+        <van-field
+          v-model="payload.safeAreaColor"
+          name="safeAreaColor"
+          label="safeAreaColor"
+          placeholder="safeAreaColor"
+        />
       </van-cell-group>
       <div style="margin: 16px">
         <van-button round block type="primary" native-type="submit">
