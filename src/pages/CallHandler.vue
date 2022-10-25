@@ -28,5 +28,26 @@
         label="Pass list of audio to play on native app"
       />
     </van-cell-group>
+    <van-cell-group>
+      <van-cell
+        is-link
+        @click="handleOpenMap"
+        title="Open Map"
+      /> </van-cell-group
+    >s
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    handleOpenMap() {
+      this.$bridge
+        .callHandler("openMap", {
+          lat: "11.576022622462348",
+          lng: "104.92305545211046",
+        })
+        .then(() => {});
+    },
+  },
+};
+</script>
