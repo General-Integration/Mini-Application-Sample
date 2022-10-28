@@ -17,6 +17,11 @@ export default {
     this.$bridge.callHandler("setBarTitle", { title: "Home Page" });
   },
   mounted() {
+    this.$router.push("?leavePage=true");
+    window.onpopstate = () => {
+      this.$bridge.callHandler("closeApp");
+    };
+
     console.log("calling getProfile: ");
     this.$bridge
       .callHandler("getProfile")
@@ -26,11 +31,11 @@ export default {
       this.listData = _.get(res, "data.data");
     });
 
-    this.$fetch
-      .get("https://jsonplaceholder.typicode.com/todos/1")
-      .then((res) => {
-        this.json = res;
-      });
+    // this.$fetch
+    //   .get("https://jsonplaceholder.typicode.com/todos/1")
+    //   .then((res) => {
+    //     this.json = res;
+    //   });
 
     // fetch("https://reqres.in/api/users?page=2")
     //   .then((response) => response.json())
@@ -50,7 +55,9 @@ export default {
     //   }
     // };
   },
-  methods: {},
+  beforeUnmount() {
+    window.onpopstate = null;
+  },
 };
 </script>
 <template>

@@ -11,6 +11,8 @@ import CallHandler from "../pages/CallHandler.vue";
 import HandlerPlayground from "../pages/BridgeHandlers/HandlerPlayground.vue";
 import HandlerSetBarTitle from "../pages/BridgeHandlers/HandlerSetBarTitle.vue";
 import HandlerPlayAudioVue from "../pages/BridgeHandlers/HandlerPlayAudio.vue";
+import HandlerOpenMapVue from "@/pages/BridgeHandlers/HandlerOpenMap.vue";
+import HandlerShareDownloadVue from "@/pages/BridgeHandlers/HandlerShareDownload.vue";
 
 const routes = [
   {
@@ -67,6 +69,16 @@ const routes = [
     path: "/handler-playAudio",
     name: "Handlers playAudio",
     component: HandlerPlayAudioVue,
+  },
+  {
+    path: "/handler-OpenMap",
+    name: "Handlers OpenMaps",
+    component: HandlerOpenMapVue,
+  },
+  {
+    path: "/handler-ShareDownload",
+    name: "Handlers Share Download",
+    component: HandlerShareDownloadVue,
   },
   {
     path: "/:catchAll(.*)",

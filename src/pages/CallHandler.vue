@@ -29,25 +29,13 @@
       />
     </van-cell-group>
     <van-cell-group>
-      <van-cell
-        is-link
-        @click="handleOpenMap"
-        title="Open Map"
-      /> </van-cell-group
-    >s
+      <van-cell is-link to="/handler-OpenMap" title="Open Map" />
+    </van-cell-group>
+    <van-cell-group>
+      <van-cell is-link to="/handler-ShareDownload" title="Share Content" />
+    </van-cell-group>
   </div>
 </template>
 <script>
-export default {
-  methods: {
-    handleOpenMap() {
-      this.$bridge
-        .callHandler("openMap", {
-          lat: "11.576022622462348",
-          lng: "104.92305545211046",
-        })
-        .then(() => {});
-    },
-  },
-};
+export default {};
 </script>
