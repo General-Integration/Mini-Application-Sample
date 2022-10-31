@@ -80,7 +80,16 @@ export default {
         />
       </router-link>
     </template>
-
+    <div>
+      <router-link to="/details">
+        <van-card
+          title="View Detail"
+          desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+          currency="$ "
+          thumb="https://img01.yzcdn.cn/vant/ipad.jpeg"
+        />
+      </router-link>
+    </div>
     <div>
       <router-link to="/playground">
         <van-card
