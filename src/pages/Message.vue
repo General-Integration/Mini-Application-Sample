@@ -27,24 +27,28 @@ export default {
   },
   methods: {
     clickBack() {
-      this.$router.push("/");
+      this.$bridge.callHandler("backToHomePage");
     },
   },
   mounted() {
-    this.status = this.$route.query.message;
+    this.$router.push("?payment");
 
     // listen back button browser click
     window.onpopstate = () => {
+      console.log("onpopstate");
       this.$bridge.callHandler("backToHomePage");
-      // window.onpopstate = () => {};
     };
+  },
+  beforeUnmount() {
+    window.onpopstate = null;
   },
 };
 </script>
 <template>
   <div class="message" style="margin-bottom: 60px">
-    <img :src="require(`@/static/${label[status].img}`)" class="img" />
-    <h3>{{ label[status].message }}</h3>
+    <!-- <img :src="require(`@/static/${label[status].img}`)" alt="" class="img" /> -->
+    <img src="@/static/success.png" class="img" alt="" />
+    <h3>Success</h3>
     <van-button type="success" @click="clickBack" class="btn-done" block
       >Done</van-button
     >
