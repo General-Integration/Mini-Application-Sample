@@ -13,6 +13,7 @@ import HandlerSetBarTitle from "../pages/BridgeHandlers/HandlerSetBarTitle.vue";
 import HandlerPlayAudioVue from "../pages/BridgeHandlers/HandlerPlayAudio.vue";
 import HandlerOpenMapVue from "@/pages/BridgeHandlers/HandlerOpenMap.vue";
 import HandlerShareDownloadVue from "@/pages/BridgeHandlers/HandlerShareDownload.vue";
+import HandlerAddCalendarVue from "@/pages/BridgeHandlers/HandlerAddCalendar.vue";
 
 const routes = [
   {
@@ -79,6 +80,11 @@ const routes = [
     path: "/handler-ShareDownload",
     name: "Handlers Share Download",
     component: HandlerShareDownloadVue,
+  },
+  {
+    path: "/handler-add-Calendar",
+    name: "Handlers Add Calendar",
+    component: HandlerAddCalendarVue,
   },
   {
     path: "/:catchAll(.*)",

@@ -22,12 +22,14 @@ export default {
   created() {
     // set bar title
     this.$bridge.callHandler("setBarTitle", { title: "Profile Page" });
+    this.$bridge.callHandler("getProfile").then((data) => {
+      console.log("getProfile", data);
+      this.profile = data;
+    });
   },
   mounted() {
     // get profile from native app
-    this.$bridge.callHandler("getProfile").then((data) => {
-      this.profile = data;
-    });
+
     this.$bridge.callHandler("getNID").then((data) => {
       this.fileNID = data;
     });

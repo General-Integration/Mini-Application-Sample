@@ -23,6 +23,8 @@ import {
   Field,
   List,
   Empty,
+  Toast,
+  Calendar,
 } from "vant";
 
 const defaultClient = new ApolloClient({
@@ -49,7 +51,9 @@ app
   .use(Form)
   .use(Field)
   .use(List)
-  .use(Empty);
+  .use(Empty)
+  .use(Toast)
+  .use(Calendar);
 
 const requireComponent = require.context(
   "./components",

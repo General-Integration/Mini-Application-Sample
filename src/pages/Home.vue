@@ -22,11 +22,6 @@ export default {
       this.$bridge.callHandler("closeApp");
     };
 
-    console.log("calling getProfile: ");
-    this.$bridge
-      .callHandler("getProfile")
-      .then((res) => console.log("profile: ", res));
-
     this.$fetch.get("https://gorest.co.in/public/v1/posts").then((res) => {
       this.listData = _.get(res, "data.data");
     });
