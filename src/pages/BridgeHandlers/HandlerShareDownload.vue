@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import { reactive } from "vue";
+import { reactive, inject } from "vue";
 const $bridge = inject("$bridge");
 const share = reactive({
   fileName: "",
@@ -29,7 +29,6 @@ const share = reactive({
   type: "text/plain",
   message: "Share Content",
 });
-
 function onSubmit() {
   $bridge.callHandler("share", [share]);
 }
