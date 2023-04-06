@@ -30,6 +30,7 @@ const share = reactive({
   message: "Share Content",
 });
 function onSubmit() {
+  console.log('payload updated', [share])
   $bridge.callHandler("share", [share]);
 }
 </script>
