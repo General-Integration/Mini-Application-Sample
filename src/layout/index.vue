@@ -37,7 +37,7 @@ export default {
     },
   },
   mounted() {
-    console.log(1111)
+    console.log('App Mounted')
     this.$bridge.registerHandler("closeApp", () => {
       // callback({ status: true });
       this.handleCloseApp();
