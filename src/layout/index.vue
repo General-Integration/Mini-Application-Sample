@@ -1,6 +1,10 @@
 <script>
 // import AppHeader f m "@/components/the-footer";
+import VConsole from 'vconsole';
 import { Tabbar, TabbarItem, Dialog } from "vant";
+
+new VConsole({ theme: 'light' });
+
 export default {
   name: "AppLayout",
   components: {
@@ -33,6 +37,7 @@ export default {
     },
   },
   mounted() {
+    console.log(1111)
     this.$bridge.registerHandler("closeApp", () => {
       // callback({ status: true });
       this.handleCloseApp();
@@ -98,3 +103,8 @@ export default {
     <!-- <AppFooter /> -->
   </div>
 </template>
+<style>
+  .vc-switch{
+    bottom: 100px !important;
+  }
+</style>
