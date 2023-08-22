@@ -25,7 +25,8 @@ export default {
   methods: {
     onUpload() {
       // trigger native-app browse file
-      this.$bridge.callHandler("uploadFile").then(() => {});
+      this.$bridge.callHandler("uploadFile", {crop: true}).then(() => {});
+      console.log('uploadFile...')
     },
   },
   mounted() {
