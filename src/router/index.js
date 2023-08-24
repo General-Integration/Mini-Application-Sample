@@ -6,6 +6,7 @@ import Detail from "@/pages/Detail.vue";
 import Message from "@/pages/Message.vue";
 import Upload from "@/pages/Upload.vue";
 import NotFound from "@/pages/NotFound.vue";
+import GoogleSign from "@/pages/GoogleSign.vue";
 import PlayGround from "../pages/PlayGround.vue";
 import CallHandler from "../pages/CallHandler.vue";
 import HandlerPlayground from "../pages/BridgeHandlers/HandlerPlayground.vue";
@@ -40,6 +41,11 @@ const routes = [
     path: "/upload",
     name: "Upload",
     component: Upload,
+  },
+  {
+    path: "/google-sign",
+    name: "Google Sign",
+    component: GoogleSign,
   },
   {
     path: "/message",
@@ -93,7 +99,8 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory("/#/"),
+  // history: createWebHistory("/#/"),
+  history: createWebHistory(),
   routes,
 });
 

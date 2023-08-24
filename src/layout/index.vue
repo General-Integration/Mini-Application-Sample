@@ -60,6 +60,9 @@ export default {
         case 2:
           this.$router.push("/upload");
           break;
+        case 3:
+          this.$router.push("/google-sign");
+          break;
         default:
           break;
       }
@@ -92,12 +95,18 @@ export default {
       <van-tabbar-item @click="redirect(1)">
         <span>Profile</span>
         <template #icon="props">
-          <img :src="props.active ? icon.active : icon.inactive" />
+          <img :src="props.active ? icon.active : icon.inactive" alt=""/>
         </template>
       </van-tabbar-item>
       <van-tabbar-item @click="redirect(2)" icon="idcard"
         >Upload</van-tabbar-item
       >
+      <van-tabbar-item @click="redirect(3)">
+        <div :style="{display: 'flex', 'flex-direction': 'column', 'justify-content': 'center', 'align-items': 'center'}">
+          <img :style="{width: '20px'}" src="https://static.vecteezy.com/system/resources/thumbnails/012/871/371/small/google-search-icon-google-product-illustration-free-png.png" alt=""/>
+          <p :style="{'margin-top': '5px', 'margin-bottom': '3px'}">Google Sign In</p>
+        </div>
+      </van-tabbar-item>
       <!-- <van-tabbar-item to="/payment" icon="idcard">Payment</van-tabbar-item> -->
     </van-tabbar>
     <!-- <AppFooter /> -->
