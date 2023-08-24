@@ -22,15 +22,19 @@ export default {
     }
   },
   mounted() {
-    google.accounts.id.initialize({
-      client_id: "778205346325-am0vd834qdodnpqfn8a56d1b2o6bvddq.apps.googleusercontent.com",
-      callback: this.handleCredentialResponse
-    });
-    google.accounts.id.renderButton(
-      document.getElementById("buttonDiv"),
-      { theme: "outline", size: "large" }  // customization attributes
-    );
-    google?.accounts.id.prompt(); // also display the One Tap dialog
+    try{
+      google.accounts.id.initialize({
+        client_id: "778205346325-am0vd834qdodnpqfn8a56d1b2o6bvddq.apps.googleusercontent.com",
+        callback: this.handleCredentialResponse
+      });
+      google.accounts.id.renderButton(
+        document.getElementById("buttonDiv"),
+        { theme: "outline", size: "large" }  // customization attributes
+      );
+      google?.accounts.id.prompt(); // also display the One Tap dialog
+    }catch(error){
+      /** error */
+    }
   }
 };
 </script>
