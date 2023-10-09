@@ -37,6 +37,9 @@
     <van-cell-group>
       <van-cell is-link to="/handler-add-Calendar" title="Add Calendar" />
     </van-cell-group>
+    <van-cell-group>
+      <van-cell is-link to="/handler-do-payment" title="Payment" />
+    </van-cell-group>
   </div>
 </template>
 <script>

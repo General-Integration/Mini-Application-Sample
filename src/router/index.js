@@ -15,6 +15,7 @@ import HandlerPlayAudioVue from "../pages/BridgeHandlers/HandlerPlayAudio.vue";
 import HandlerOpenMapVue from "@/pages/BridgeHandlers/HandlerOpenMap.vue";
 import HandlerShareDownloadVue from "@/pages/BridgeHandlers/HandlerShareDownload.vue";
 import HandlerAddCalendarVue from "@/pages/BridgeHandlers/HandlerAddCalendar.vue";
+import HandlerDoPaymentVue from "@/pages/BridgeHandlers/HandlerDoPayment.vue";
 
 const routes = [
   {
@@ -93,14 +94,19 @@ const routes = [
     component: HandlerAddCalendarVue,
   },
   {
+    path: "/handler-do-payment",
+    name: "Handlers Do Payment",
+    component: HandlerDoPaymentVue,
+  },
+  {
     path: "/:catchAll(.*)",
     component: NotFound,
   },
 ];
 
 const router = createRouter({
-  history: createWebHistory("/#/"),
-  // history: createWebHistory(),
+  // history: createWebHistory("/#/"),
+  history: createWebHistory(),
   routes,
 });
 
