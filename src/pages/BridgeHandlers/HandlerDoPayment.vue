@@ -27,7 +27,10 @@ function onSubmit() {
   $bridge.callHandler("doPayment", {
     defaultLayout: checked.value,
     backgroundColor: '#f66d12',
-    textColor: '#FFF'
+    textColor: '#FFF',
+    account: Date.now(),
+    currency: "USD",
+    amount: 10
   })
 }
 </script>
