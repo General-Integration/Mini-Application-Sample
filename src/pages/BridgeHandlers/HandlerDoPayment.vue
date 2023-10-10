@@ -23,15 +23,18 @@ const checked = ref(true)
 const $bridge = inject("$bridge");
  
 function onSubmit() {
-  console.log(checked.value)
-  $bridge.callHandler("doPayment", {
+  const payload = {
     defaultLayout: checked.value,
     backgroundColor: '#f66d12',
     textColor: '#FFF',
     account: Date.now(),
     currency: "USD",
     amount: 10
-  })
+  }
+
+  console.log(payload)
+  
+  $bridge.callHandler("doPayment", payload)
 }
 </script>
 <style lang="scss">
