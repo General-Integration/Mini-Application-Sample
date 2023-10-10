@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "cross-env NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
-    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
+    "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -12,7 +12,6 @@
     "@vue/apollo-composable": "^4.0.0-alpha.16",
     "axios": "^0.21.1",
     "core-js": "^3.15.2",
-    "cross-env": "^7.0.3",
     "graphql": "^15.5.3",
     "jquery": "^3.6.0",
     "lodash": "^4.17.21",
