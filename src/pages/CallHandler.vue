@@ -20,6 +20,9 @@
       <van-cell is-link to="/handler-ShareDownload" title="Share Content" />
     </van-cell-group>
     <van-cell-group>
+      <van-cell is-link to="/handler-download" title="Download Content" />
+    </van-cell-group>
+    <van-cell-group>
       <van-cell is-link to="/handler-add-Calendar" title="Add Calendar" />
     </van-cell-group>
     <van-cell-group>

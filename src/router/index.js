@@ -14,6 +14,7 @@ import HandlerSetBarTitle from "../pages/BridgeHandlers/HandlerSetBarTitle.vue";
 import HandlerPlayAudioVue from "../pages/BridgeHandlers/HandlerPlayAudio.vue";
 import HandlerOpenMapVue from "@/pages/BridgeHandlers/HandlerOpenMap.vue";
 import HandlerShareDownloadVue from "@/pages/BridgeHandlers/HandlerShareDownload.vue";
+import HandlerDownloadVue from "@/pages/BridgeHandlers/HandlerDownload.vue";
 import HandlerAddCalendarVue from "@/pages/BridgeHandlers/HandlerAddCalendar.vue";
 import HandlerDoPaymentVue from "@/pages/BridgeHandlers/HandlerDoPayment.vue";
 import HandlerAccountOnFile from '@/pages/BridgeHandlers/HandlerAccountOnFile.vue'
@@ -88,6 +89,11 @@ const routes = [
     path: '/handler-ShareDownload',
     name: 'Handlers Share Download',
     component: HandlerShareDownloadVue,
+  },
+  {
+    path: '/handler-download',
+    name: 'Handlers Download',
+    component: HandlerDownloadVue,
   },
   {
     path: '/handler-add-Calendar',

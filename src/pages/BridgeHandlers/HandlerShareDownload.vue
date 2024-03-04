@@ -1,15 +1,22 @@
 <template>
   <div style="margin-left: 16px">
     <h3>Share Content</h3>
-    <p style="margin-top: 36px">Test Share Content</p>
   </div>
   <van-form @submit="onSubmit" class="custom-share">
-    <van-cell-group inset>
+    <van-cell-group inset :style="{marginBottom: '5px'}">
       <van-field
         v-model="message"
         name="Message"
         placeholder="Message"
         :rules="[{ required: true, message: 'Message is required' }]"
+      />
+    </van-cell-group>
+    <p :style="{margin: '14px 0px 8px 14px', fontSize: '14px', color: '#555555'}">Optional</p>
+    <van-cell-group inset>
+      <van-field
+        v-model="trxId"
+        name="trxId"
+        placeholder="Trx ID"
       />
     </van-cell-group>
     <div style="margin: 26px 16px">
@@ -22,13 +29,14 @@
 
 <script setup>
 import { ref, inject } from "vue";
-const $bridge = inject("$bridge");
 
+const trxId = ref()
+const $bridge = inject("$bridge");
 const message = ref('Share messge')
  
 function onSubmit() {
 
-  $bridge.callHandler("share", {
+  const payload = {
     message: message.value,
     files: [
       {
@@ -42,7 +50,11 @@ function onSubmit() {
         type: "image/png"
       }
     ]
-  });
+  }
+
+  $bridge.callHandler("share", (trxId.value ? {...payload, trxId: trxId.value} : payload));
+
+  console.log((trxId.value ? {...payload, trxId: trxId.value} : payload))
 }
 </script>
 <style lang="scss">
