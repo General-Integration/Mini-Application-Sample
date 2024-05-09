@@ -1,4 +1,5 @@
 <script>
+import { registerHandler } from 'web-bridge-gateway'
 import {
   Card,
   Icon,
@@ -81,12 +82,12 @@ export default {
     },
   },
   mounted() {
-    this.$bridge.registerHandler("getStatus", (data) => {
+    registerHandler("getStatus", (data) => {
       console.log("getStatus", data);
-      this.$router.push({
-        path: "message",
-        query: { message: data.status },
-      });
+      // this.$router.push({
+      //   path: "message",
+      //   query: { message: data.status },
+      // });
     });
   },
 };
