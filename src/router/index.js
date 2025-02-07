@@ -19,86 +19,90 @@ import HandlerAddCalendarVue from "@/pages/BridgeHandlers/HandlerAddCalendar.vue
 import HandlerDoPaymentVue from "@/pages/BridgeHandlers/HandlerDoPayment.vue";
 import HandlerPreviewPdfVue from "@/pages/BridgeHandlers/HandlerPreviewPdf.vue";
 import HandlerAccountOnFile from '@/pages/BridgeHandlers/HandlerAccountOnFile.vue'
+import HandlerAccountOnFile from "@/pages/BridgeHandlers/HandlerAccountOnFile.vue";
+import HandlerCurrentLocation from "@/pages/BridgeHandlers/HandlerRequestCurrentLocatoin.vue";
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
+    path: "/",
+    name: "Home",
     component: Home,
   },
   {
-    path: '/profile',
-    name: 'Profile',
+    path: "/profile",
+    name: "Profile",
     component: Profile,
   },
   {
-    path: '/payment',
-    name: 'Payment',
+    path: "/payment",
+    name: "Payment",
     component: Payment,
   },
   {
-    path: '/details',
-    name: 'Detail',
+    path: "/details",
+    name: "Detail",
     component: Detail,
   },
   {
-    path: '/upload',
-    name: 'Upload',
+    path: "/upload",
+    name: "Upload",
     component: Upload,
   },
   {
-    path: '/google-sign',
-    name: 'Google Sign',
+    path: "/google-sign",
+    name: "Google Sign",
     component: GoogleSign,
   },
   {
-    path: '/message',
-    name: 'Message',
+    path: "/message",
+    name: "Message",
     component: Message,
   },
   {
-    path: '/playground',
-    name: 'Playground',
+    path: "/playground",
+    name: "Playground",
     component: PlayGround,
   },
   {
-    path: '/handlers',
-    name: 'Handlers',
+    path: "/handlers",
+    name: "Handlers",
     component: CallHandler,
   },
   {
-    path: '/handler-playground',
-    name: 'Handlers Playground',
+    path: "/handler-playground",
+    name: "Handlers Playground",
     component: HandlerPlayground,
   },
   {
-    path: '/handler-setBarTitle',
-    name: 'Handlers setBarTitle',
+    path: "/handler-setBarTitle",
+    name: "Handlers setBarTitle",
     component: HandlerSetBarTitle,
   },
   {
-    path: '/handler-playAudio',
-    name: 'Handlers playAudio',
+    path: "/handler-playAudio",
+    name: "Handlers playAudio",
     component: HandlerPlayAudioVue,
   },
   {
-    path: '/handler-OpenMap',
-    name: 'Handlers OpenMaps',
+    path: "/handler-OpenMap",
+    name: "Handlers OpenMaps",
     component: HandlerOpenMapVue,
   },
   {
-    path: '/handler-ShareDownload',
-    name: 'Handlers Share Download',
+    path: "/handler-ShareDownload",
+    name: "Handlers Share Download",
     component: HandlerShareDownloadVue,
   },
   {
-    path: '/handler-download',
-    name: 'Handlers Download',
+    path: "/handler-download",
+    name: "Handlers Download",
     component: HandlerDownloadVue,
   },
   {
-    path: '/handler-add-Calendar',
-    name: 'Handlers Add Calendar',
+    path: "/handler-add-Calendar",
+    name: "Handlers Add Calendar",
+    path: "/handler-add-Calendar",
+    name: "Handlers Add Calendar",
     component: HandlerAddCalendarVue,
   },
   {
@@ -112,20 +116,25 @@ const routes = [
     component: HandlerPreviewPdfVue,
   },
   {
-    path: '/handler-account-on-file',
-    name: 'Handlers Account On File',
+    path: "/handler-account-on-file",
+    name: "Handlers Account On File",
     component: HandlerAccountOnFile,
   },
   {
-    path: '/:catchAll(.*)',
+    path: "/handler-request-current-location",
+    name: "Handlers Request Current Location",
+    component: HandlerCurrentLocation,
+  },
+  {
+    path: "/:catchAll(.*)",
     component: NotFound,
   },
-]
+];
 
 const router = createRouter({
-  history: createWebHistory('/#/'),
+  history: createWebHistory("/#/"),
   // history: createWebHistory(),
   routes,
-})
+});
 
-export default router
+export default router;

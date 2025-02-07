@@ -7679,6 +7679,11 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
+web-bridge-gateway@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/web-bridge-gateway/-/web-bridge-gateway-1.0.5.tgz#f76978f54ad7288a4b3c098c69a34d3d2ffe2ec3"
+  integrity sha512-MliOrKiSQy1vr19amI3uzUh9wm4NDG5hPdFMQzlRmRJQwECU3QeVS4oCoX7l4YfTdazF6fcYJXLSmzxlgtjfpQ==
+
 webidl-conversions@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"
