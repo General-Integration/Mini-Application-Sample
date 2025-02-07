@@ -17,6 +17,7 @@ import HandlerShareDownloadVue from "@/pages/BridgeHandlers/HandlerShareDownload
 import HandlerDownloadVue from "@/pages/BridgeHandlers/HandlerDownload.vue";
 import HandlerAddCalendarVue from "@/pages/BridgeHandlers/HandlerAddCalendar.vue";
 import HandlerDoPaymentVue from "@/pages/BridgeHandlers/HandlerDoPayment.vue";
+import HandlerPreviewPdfVue from "@/pages/BridgeHandlers/HandlerPreviewPdf.vue";
 import HandlerAccountOnFile from '@/pages/BridgeHandlers/HandlerAccountOnFile.vue'
 
 const routes = [
@@ -104,6 +105,11 @@ const routes = [
     path: "/handler-do-payment",
     name: "Handlers Do Payment",
     component: HandlerDoPaymentVue,
+  },
+  {
+    path: "/handler-preview-pdf",
+    name: "Handlers Preview Pdf",
+    component: HandlerPreviewPdfVue,
   },
   {
     path: '/handler-account-on-file',

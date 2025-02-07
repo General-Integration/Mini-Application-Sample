@@ -31,6 +31,9 @@
     <van-cell-group>
       <van-cell is-link to="/handler-do-payment" title="Payment" />
     </van-cell-group>
+    <van-cell-group>
+      <van-cell is-link to="/handler-preview-pdf" title="Preview PDF" />
+    </van-cell-group>
   </div>
 </template>
 <script>
