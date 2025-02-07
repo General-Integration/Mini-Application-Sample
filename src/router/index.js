@@ -19,7 +19,6 @@ import HandlerAddCalendarVue from "@/pages/BridgeHandlers/HandlerAddCalendar.vue
 import HandlerDoPaymentVue from "@/pages/BridgeHandlers/HandlerDoPayment.vue";
 import HandlerPreviewPdfVue from "@/pages/BridgeHandlers/HandlerPreviewPdf.vue";
 import HandlerAccountOnFile from '@/pages/BridgeHandlers/HandlerAccountOnFile.vue'
-import HandlerAccountOnFile from "@/pages/BridgeHandlers/HandlerAccountOnFile.vue";
 import HandlerCurrentLocation from "@/pages/BridgeHandlers/HandlerRequestCurrentLocatoin.vue";
 
 const routes = [
