@@ -19,6 +19,7 @@ const $bridge = inject("$bridge");
 
  
 const onSubmit = () => {
+  console.log('File size is 8.5MB')
   const payload = {
     fileName: "ABA Mobile TechStack.pdf",
     content: techStackPdfBase64,
