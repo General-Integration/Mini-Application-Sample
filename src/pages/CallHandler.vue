@@ -50,7 +50,10 @@
       <van-cell is-link to="/handler-request-current-location" title="Request Current Location"/>
     </van-cell-group>
     <van-cell-group>
-      <van-cell is-link to="/handler-preview-pdf" title="Preview PDF" />
+      <van-cell is-link to="/handler-preview-pdf" title="Preview PDF (not work)" />
+    </van-cell-group>
+     <van-cell-group>
+      <van-cell is-link to="/handler-preview-pdf2" title="Preview PDF (work)" />
     </van-cell-group>
   </div>
 </template>

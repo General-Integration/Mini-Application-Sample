@@ -20,6 +20,7 @@ import HandlerDoPaymentVue from "@/pages/BridgeHandlers/HandlerDoPayment.vue";
 import HandlerPreviewPdfVue from "@/pages/BridgeHandlers/HandlerPreviewPdf.vue";
 import HandlerAccountOnFile from '@/pages/BridgeHandlers/HandlerAccountOnFile.vue'
 import HandlerCurrentLocation from "@/pages/BridgeHandlers/HandlerRequestCurrentLocatoin.vue";
+import HandlerPreviewPdf2Vue from "@/pages/BridgeHandlers/HandlerPreviewPdf2.vue";
 
 const routes = [
   {
@@ -113,6 +114,16 @@ const routes = [
     path: "/handler-preview-pdf",
     name: "Handlers Preview Pdf",
     component: HandlerPreviewPdfVue,
+  },
+    {
+    path: "/handler-preview-pdf",
+    name: "Handlers Preview Pdf",
+    component: HandlerPreviewPdfVue,
+  },
+  {
+    path: "/handler-preview-pdf2",
+    name: "Handlers Preview Pdf 2",
+    component: HandlerPreviewPdf2Vue,
   },
   {
     path: "/handler-account-on-file",
